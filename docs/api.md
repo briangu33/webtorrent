@@ -196,7 +196,7 @@ Total download progress for all **active** torrents, from 0 to 1.
 
 ## `client.ratio`
 
-Aggregate "seed ratio" for all torrents (uploaded / downloaded), from 0 to 1.
+Aggregate "seed ratio" for all torrents (uploaded / downloaded).
 
 
 # Torrent API
@@ -252,7 +252,7 @@ Torrent download progress, from 0 to 1.
 
 ## `torrent.ratio`
 
-Torrent "seed ratio" (uploaded / downloaded), from 0 to 1.
+Torrent "seed ratio" (uploaded / downloaded).
 
 ## `torrent.numPeers`
 
@@ -407,7 +407,7 @@ Here is a usage example:
 
 ```js
 torrent.on('done', function(){
-  console.log('torrent finished downloading');
+  console.log('torrent finished downloading')
   torrent.files.forEach(function(file){
      // do something with file
   })
@@ -422,7 +422,7 @@ instance:
 ```js
 torrent.on('download', function (bytes) {
   console.log('just downloaded: ' + bytes)
-  console.log('total downloaded: ' + torrent.downloaded);
+  console.log('total downloaded: ' + torrent.downloaded)
   console.log('download speed: ' + torrent.downloadSpeed)
   console.log('progress: ' + torrent.progress)
 })
